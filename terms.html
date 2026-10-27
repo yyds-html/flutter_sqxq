@@ -3,23 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="theme-color" content="#0a1028">
+  <meta name="theme-color" content="#ffffff">
   <meta name="description" content="省万宝 App 用户协议：规定用户与省万宝之间的权利与义务，包括账号注册、导购返利服务、提现规则、用户行为准则、免责声明及争议解决等条款。">
   <title>用户协议 · 省万宝</title>
   <style>
     :root {
-      --ink: #0a1028;
-      --paper: #f0e6d2;
+      --bg: #ffffff;
+      --text-main: #262626;
+      --text-sub: #737373;
+      --heading: #171717;
       --accent: #e2603f;
-      --gold: #ffcf9e;
+      --border: #e5e5e5;
+      --code-bg: #f5f5f5;
+      --code-text: #b91c1c;
+      --table-th-bg: #fafaf9;
+      --callout-bg: #fff8f5;
       --serif: "Songti SC", "Noto Serif SC", "Noto Serif CJK SC", "STSong", "SimSun", serif;
       --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
     }
     * { box-sizing: border-box; }
     html, body {
       margin: 0;
-      background: var(--ink);
-      color: var(--paper);
+      background: var(--bg);
+      color: var(--text-main);
     }
     body {
       font-family: var(--serif);
@@ -41,12 +47,12 @@
       font-size: 24px;
       font-weight: 700;
       letter-spacing: .24em;
-      color: var(--gold);
+      color: var(--heading);
       margin: 0 0 8px;
     }
     .updated {
       font-size: 12.5px;
-      opacity: .5;
+      color: var(--text-sub);
       letter-spacing: .16em;
       margin: 0 0 36px;
     }
@@ -54,19 +60,19 @@
       font-size: 16px;
       font-weight: 700;
       letter-spacing: .18em;
-      color: var(--gold);
+      color: var(--heading);
       margin: 40px 0 12px;
       border-left: 3px solid var(--accent);
       padding-left: 10px;
     }
     p {
       margin: 0 0 14px;
-      opacity: .88;
+      color: var(--text-main);
     }
     ul {
       margin: 0 0 16px;
       padding-left: 1.3em;
-      opacity: .88;
+      color: var(--text-main);
     }
     li {
       margin-bottom: 8px;
@@ -75,27 +81,27 @@
       font-family: var(--mono);
       font-size: 13px;
       letter-spacing: 0;
-      background: rgba(240, 230, 210, .08);
+      background: var(--code-bg);
       border-radius: 4px;
       padding: 2px 6px;
-      color: #ffd8a8;
+      color: var(--code-text);
     }
     strong {
-      color: var(--gold);
+      color: var(--heading);
       font-weight: 700;
     }
     a {
-      color: var(--paper);
+      color: var(--accent);
       text-decoration: none;
-      border-bottom: 1px solid rgba(226, 96, 63, .55);
+      border-bottom: 1px solid rgba(226, 96, 63, .35);
       transition: all .2s ease;
     }
     a:hover {
-      color: var(--gold);
-      border-color: var(--accent);
+      color: #c2410c;
+      border-color: #c2410c;
     }
     .callout {
-      background: rgba(226, 96, 63, .08);
+      background: var(--callout-bg);
       border-left: 3px solid var(--accent);
       padding: 12px 16px;
       margin: 18px 0;

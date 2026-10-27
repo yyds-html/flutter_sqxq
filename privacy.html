@@ -3,23 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="theme-color" content="#0a1028">
+  <meta name="theme-color" content="#ffffff">
   <meta name="description" content="省万宝 App 隐私政策：详细说明我们申请了哪些系统权限（剪贴板、相册、相机等）、服务端记录了什么、集成了哪些第三方 SDK（阿里百川、阿里云号码认证等），以及你如何自主管理与注销这些数据。">
   <title>隐私政策 · 省万宝</title>
   <style>
     :root {
-      --ink: #0a1028;
-      --paper: #f0e6d2;
+      --bg: #ffffff;
+      --text-main: #262626;
+      --text-sub: #737373;
+      --heading: #171717;
       --accent: #e2603f;
-      --gold: #ffcf9e;
+      --border: #e5e5e5;
+      --code-bg: #f5f5f5;
+      --code-text: #b91c1c;
+      --table-th-bg: #fafaf9;
+      --callout-bg: #fff8f5;
       --serif: "Songti SC", "Noto Serif SC", "Noto Serif CJK SC", "STSong", "SimSun", serif;
       --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
     }
     * { box-sizing: border-box; }
     html, body {
       margin: 0;
-      background: var(--ink);
-      color: var(--paper);
+      background: var(--bg);
+      color: var(--text-main);
     }
     body {
       font-family: var(--serif);
@@ -41,12 +47,12 @@
       font-size: 24px;
       font-weight: 700;
       letter-spacing: .24em;
-      color: var(--gold);
+      color: var(--heading);
       margin: 0 0 8px;
     }
     .updated {
       font-size: 12.5px;
-      opacity: .5;
+      color: var(--text-sub);
       letter-spacing: .16em;
       margin: 0 0 36px;
     }
@@ -54,7 +60,7 @@
       font-size: 16px;
       font-weight: 700;
       letter-spacing: .18em;
-      color: var(--gold);
+      color: var(--heading);
       margin: 40px 0 12px;
       border-left: 3px solid var(--accent);
       padding-left: 10px;
@@ -63,17 +69,17 @@
       font-size: 14.5px;
       font-weight: 700;
       letter-spacing: .1em;
-      color: #ffe0be;
+      color: var(--heading);
       margin: 24px 0 8px;
     }
     p {
       margin: 0 0 14px;
-      opacity: .88;
+      color: var(--text-main);
     }
     ul {
       margin: 0 0 16px;
       padding-left: 1.3em;
-      opacity: .88;
+      color: var(--text-main);
     }
     li {
       margin-bottom: 8px;
@@ -82,24 +88,24 @@
       font-family: var(--mono);
       font-size: 13px;
       letter-spacing: 0;
-      background: rgba(240, 230, 210, .08);
+      background: var(--code-bg);
       border-radius: 4px;
       padding: 2px 6px;
-      color: #ffd8a8;
+      color: var(--code-text);
     }
     strong {
-      color: var(--gold);
+      color: var(--heading);
       font-weight: 700;
     }
     a {
-      color: var(--paper);
+      color: var(--accent);
       text-decoration: none;
-      border-bottom: 1px solid rgba(226, 96, 63, .55);
+      border-bottom: 1px solid rgba(226, 96, 63, .35);
       transition: all .2s ease;
     }
     a:hover {
-      color: var(--gold);
-      border-color: var(--accent);
+      color: #c2410c;
+      border-color: #c2410c;
     }
     table {
       width: 100%;
@@ -109,25 +115,25 @@
       line-height: 1.7;
     }
     th, td {
-      border: 1px solid rgba(240, 230, 210, .15);
+      border: 1px solid var(--border);
       padding: 10px 12px;
       text-align: left;
     }
     th {
-      background: rgba(240, 230, 210, .06);
-      color: var(--gold);
+      background: var(--table-th-bg);
+      color: var(--heading);
       font-weight: 700;
     }
     td {
-      opacity: .88;
+      color: var(--text-main);
     }
     hr {
       border: 0;
-      border-top: 1px solid rgba(240, 230, 210, .12);
+      border-top: 1px solid var(--border);
       margin: 44px 0 28px;
     }
     .callout {
-      background: rgba(226, 96, 63, .08);
+      background: var(--callout-bg);
       border-left: 3px solid var(--accent);
       padding: 12px 16px;
       margin: 18px 0;
