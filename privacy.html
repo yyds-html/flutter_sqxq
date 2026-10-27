@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0a1028">
+  <meta name="description" content="省万宝 App 隐私政策：详细说明我们申请了哪些系统权限（剪贴板、相册、相机等）、服务端记录了什么、集成了哪些第三方 SDK（阿里百川、阿里云号码认证等），以及你如何自主管理与注销这些数据。">
+  <title>隐私政策 · 省万宝</title>
+  <style>
+    :root {
+      --ink: #0a1028;
+      --paper: #f0e6d2;
+      --accent: #e2603f;
+      --gold: #ffcf9e;
+      --serif: "Songti SC", "Noto Serif SC", "Noto Serif CJK SC", "STSong", "SimSun", serif;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      background: var(--ink);
+      color: var(--paper);
+    }
+    body {
+      font-family: var(--serif);
+      font-size: 15px;
+      line-height: 2.1;
+      letter-spacing: .04em;
+      padding:
+        calc(48px + env(safe-area-inset-top))
+        calc(22px + env(safe-area-inset-right))
+        calc(64px + env(safe-area-inset-bottom))
+        calc(22px + env(safe-area-inset-left));
+      -webkit-text-size-adjust: 100%;
+    }
+    main {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    h1 {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: .24em;
+      color: var(--gold);
+      margin: 0 0 8px;
+    }
+    .updated {
+      font-size: 12.5px;
+      opacity: .5;
+      letter-spacing: .16em;
+      margin: 0 0 36px;
+    }
+    h2 {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: .18em;
+      color: var(--gold);
+      margin: 40px 0 12px;
+      border-left: 3px solid var(--accent);
+      padding-left: 10px;
+    }
+    h3 {
+      font-size: 14.5px;
+      font-weight: 700;
+      letter-spacing: .1em;
+      color: #ffe0be;
+      margin: 24px 0 8px;
+    }
+    p {
+      margin: 0 0 14px;
+      opacity: .88;
+    }
+    ul {
+      margin: 0 0 16px;
+      padding-left: 1.3em;
+      opacity: .88;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    code {
+      font-family: var(--mono);
+      font-size: 13px;
+      letter-spacing: 0;
+      background: rgba(240, 230, 210, .08);
+      border-radius: 4px;
+      padding: 2px 6px;
+      color: #ffd8a8;
+    }
+    strong {
+      color: var(--gold);
+      font-weight: 700;
+    }
+    a {
+      color: var(--paper);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(226, 96, 63, .55);
+      transition: all .2s ease;
+    }
+    a:hover {
+      color: var(--gold);
+      border-color: var(--accent);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0 24px;
+      font-size: 13.5px;
+      line-height: 1.7;
+    }
+    th, td {
+      border: 1px solid rgba(240, 230, 210, .15);
+      padding: 10px 12px;
+      text-align: left;
+    }
+    th {
+      background: rgba(240, 230, 210, .06);
+      color: var(--gold);
+      font-weight: 700;
+    }
+    td {
+      opacity: .88;
+    }
+    hr {
+      border: 0;
+      border-top: 1px solid rgba(240, 230, 210, .12);
+      margin: 44px 0 28px;
+    }
+    .callout {
+      background: rgba(226, 96, 63, .08);
+      border-left: 3px solid var(--accent);
+      padding: 12px 16px;
+      margin: 18px 0;
+      border-radius: 0 6px 6px 0;
+    }
+  </style>
+</head>
+<body>
+<main>
+  <h1>隐私政策</h1>
+  <p class="updated">版本生效与更新日期：2026 年 10 月 27 日</p>
+
+  <p><strong>「省万宝」</strong>（以下简称“本 App”或“我们”）是一款专为用户寻找全网电商优惠券、导购比价、外卖返利与生活省钱福利的移动工具助手。我们深知个人隐私与数据安全对你的重要性，坚持遵循<strong>「权责一致、目的明确、选择同意、最少必要、公开透明」</strong>的原则保护你的个人信息。</p>
+
+  <div class="callout">
+    <p style="margin:0;">本说明不玩文字游戏，老老实实向你交代本 App <strong>读取了哪些手机内容、为什么申请相关权限、接入了哪些 SDK</strong>，以及你如何随时撤回授权或注销删除。</p>
+  </div>
+
+  <h2>一、系统权限申请与实际使用场景</h2>
+  <p>我们仅在实现特定业务功能时，以弹窗形式向你主动申请相关系统权限。你可以随时在系统的「权限管理」中关闭任一权限：</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 24%;">权限名称</th>
+        <th style="width: 28%;">调用场景</th>
+        <th>详细说明与保障</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>读取/写入剪贴板</strong></td>
+        <td>冷启动或从后台切换回 App 前台时识别淘口令/电商链接</td>
+        <td>当你从淘宝、京东、拼多多等外部软件复制商品信息回到本 App 时，App 会在获得你许可的前提下自动读取剪贴板以帮你<strong>智能查券与匹配返利</strong>。本 App 对非电商文本及自身复制的内容自动过滤跳过，<strong>绝不会上传任何与查券无关的私人剪贴板内容</strong>。</td>
+      </tr>
+      <tr>
+        <td><strong>相册/读取媒体内容</strong><br><code>READ_MEDIA_IMAGES</code></td>
+        <td>保存商品海报、分享二维码；修改个人头像时选取照片</td>
+        <td>仅在你主动点击「保存海报」、「保存二维码」或在个人资料中「更换头像」时调用。我们绝不会在后台暗中扫描或上传你的私人照片。</td>
+      </tr>
+      <tr>
+        <td><strong>相机拍照</strong><br><code>CAMERA</code></td>
+        <td>现场拍照设置头像；提交客服反馈与申诉时拍照存证</td>
+        <td>仅在你主动触发拍照操作时启动相机硬件，拍完后由你确认方可提交，绝不进行任何静默拍照或录像。</td>
+      </tr>
+      <tr>
+        <td><strong>网络访问</strong><br><code>INTERNET</code></td>
+        <td>获取商品优惠券、同步订单收益、账号登录通信</td>
+        <td>应用的基础网络通信权限，用于请求商品信息、解析优惠券、拉取外卖福利活动及与云端数据库安全同步。</td>
+      </tr>
+      <tr>
+        <td><strong>查询应用列表与电商 Scheme 跳转</strong></td>
+        <td>一键打开手机淘宝、京东、拼多多等官方客户端领券下单</td>
+        <td>通过查询系统是否支持指定 Scheme（如 <code>tbopen://</code>、<code>openApp.jdMobile://</code>、<code>pinduoduo://</code> 等），若已安装则一键唤起官方 App 完成交易，避免你在内置网页反复输密码；<strong>不遍历、不搜集你的完整已装应用列表</strong>。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>二、服务端记录与收集的数据</h2>
+  <p>当你使用省万宝提供的在线服务时，后端服务（基于 Supabase 鉴权存储及接口服务）会依法记录以下必要数据：</p>
+  <ul>
+    <li><strong>账号信息</strong>：你的注册手机号码（用于验证码或本机号码一键校验身份）、经过哈希加密的安全密码、昵称与头像图片。</li>
+    <li><strong>导购返利与订单信息</strong>：你通过本 App 领券跳转购买后，由电商平台返利接口同步给我们的电商订单编号、下单时间、商品摘要及返利佣金金额；我们<strong>无法得知你下单时的详细收货地址、银行卡号或支付密码</strong>。</li>
+    <li><strong>提现结算账户</strong>：当你申请将省万宝钱包余额提现至个人账户时，需提供对应的提现账号（如支付宝账号及实名姓名），仅用于资金合规打款，不会用于其他用途。</li>
+    <li><strong>邀请与团队关系</strong>：通过邀请码绑定的上下级推荐关系，用于准确核算团队导购收益分成。</li>
+    <li><strong>基础安全日志</strong>：发起接口请求时的 IP 地址与网络时间，仅在内存与风控日志中用于<strong>防范黑产自动化刷单、防撞库及限流安全保护</strong>，不会用于任何广告定向追踪或个人画像。</li>
+  </ul>
+
+  <h2>三、第三方 SDK 与外部合作方</h2>
+  <p>为了保障部分核心功能（如快速登录、淘宝客授权跳转）的正常运行，本 App 集成了部分经过审慎评估的第三方开发套件（SDK）。它们各自收集的数据与隐私权政策如下：</p>
+
+  <h3>1. 阿里百川 SDK（flutter_alibc_ultimate / 阿里巴巴）</h3>
+  <ul>
+    <li><strong>服务用途</strong>：提供淘宝账号快捷授权登录、唤起手机淘宝客户端完成领券、加入购物车与商品详情无缝跳转。</li>
+    <li><strong>收集信息</strong>：设备型号、操作系统版本、网络状态、应用包名、淘宝客交易参数。</li>
+    <li><strong>第三方说明</strong>：请查阅 <a href="https://terms.alicdn.com/legal-agreement/terms/suit_bu1_taobao/suit_bu1_taobao201703241622_61002.html" target="_blank" rel="noopener">阿里百川隐私权政策</a>。</li>
+  </ul>
+
+  <h3>2. 阿里云号码认证服务 SDK（ali_auth / 一键免密登录）</h3>
+  <ul>
+    <li><strong>服务用途</strong>：协同中国移动、中国联通、中国电信三大运营商，免去短信验证码输入，实现当前设备 SIM 卡手机号一键登录。</li>
+    <li><strong>收集信息</strong>：网络运营商类型、蜂窝网络连接状态、加密后的运营商网关 Token。</li>
+    <li><strong>第三方说明</strong>：请查阅 <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud202112211045_86198.html" target="_blank" rel="noopener">阿里云号码认证服务隐私政策</a>。</li>
+  </ul>
+
+  <h2>四、你如何控制自己的数据（用户权利）</h2>
+  <p>你对自己在省万宝的全部个人信息拥有完整的控制权：</p>
+  <ul>
+    <li><strong>查阅与修改</strong>：在 App 中点击「我的」-「设置」-「完善个人信息」，可随时查阅并更新你的头像、昵称、收货地址与个人资料。</li>
+    <li><strong>撤销系统授权</strong>：随时前往手机系统的「设置」-「应用」-「省万宝」中关闭相册、相机等系统权限，撤回授权不影响其他基础导购功能的正常使用。</li>
+    <li><strong>账号注销与清空</strong>：在「我的」-「设置」-「账户与安全」中，我们提供了<strong>自主注销账号</strong>入口。当你确认注销账号后，我们将停止为你提供服务，并在法定期限届满后永久删除或匿名化清退你的手机号、历史订单与提现记录。</li>
+    <li><strong>清除本地数据</strong>：可直接在系统应用详情中点击「清除数据」或卸载本 App，本地所有缓存、足迹和凭据将一并清除。</li>
+  </ul>
+
+  <h2>五、未成年人保护</h2>
+  <p>本 App 的商品导购与返利服务主要面向具备完全民事行为能力的成年网购消费者。<strong>我们不会主动要求未成年人提供个人敏感资料，也不会向未成年人推送违规消费内容。</strong>若你是未满 18 周岁的未成年人，使用本服务前应在父母或其他监护人的陪同与指导下共同阅读并取得其明确同意。</p>
+
+  <h2>六、政策变更与联系我们</h2>
+  <p>如因业务功能迭代或法律法规要求而调整本政策，我们会在更新时重新发布并刷新本页面顶部的更新时间；涉及重大功能权责调整时，我们会在 App 启动时通过弹窗通知再次征求你的同意。</p>
+  <p>如果你对本隐私政策或个人数据处理有任何疑问、建议或投诉，可通过以下方式联系我们：</p>
+  <ul>
+    <li>在 App 内点击「我的」-「设置」-「帮助与反馈」提交在线留言；</li>
+    <li>通过开发者反馈渠道与关于页面列明的官方服务支持进行联系。</li>
+  </ul>
+</main>
+</body>
+</html>
