@@ -3,23 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="theme-color" content="#ffffff">
-  <meta name="description" content="省万宝 App 用户协议：规定用户与省万宝之间的权利与义务，包括账号注册、商品导购服务、优惠券领用规范、用户行为准则、免责声明及争议解决等条款。">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
+  <meta name="description" content="省万宝 App 用户服务协议：规定用户与省万宝之间的权利与义务，包括账号注册、商品优惠导购服务、用户行为准则、知识产权、免责声明及争议解决等条款。">
   <title>用户协议 · 省万宝</title>
   <style>
     :root {
       --bg: #ffffff;
-      --text-main: #262626;
-      --text-sub: #737373;
-      --heading: #171717;
+      --text-main: #334155;
+      --text-sub: #64748b;
+      --heading: #0f172a;
       --accent: #e2603f;
-      --border: #e5e5e5;
-      --code-bg: #f5f5f5;
-      --code-text: #b91c1c;
-      --table-th-bg: #fafaf9;
+      --accent-hover: #c2410c;
+      --border: #e2e8f0;
+      --table-th-bg: #f8fafc;
       --callout-bg: #fff8f5;
-      --serif: "Songti SC", "Noto Serif SC", "Noto Serif CJK SC", "STSong", "SimSun", serif;
-      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      --callout-border: #e2603f;
+      --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #121212;
+        --text-main: #cbd5e1;
+        --text-sub: #94a3b8;
+        --heading: #f8fafc;
+        --accent: #f97316;
+        --accent-hover: #fb923c;
+        --border: #27272a;
+        --table-th-bg: #18181b;
+        --callout-bg: #1c1917;
+        --callout-border: #ea580c;
+      }
     }
     * { box-sizing: border-box; }
     html, body {
@@ -28,67 +42,57 @@
       color: var(--text-main);
     }
     body {
-      font-family: var(--serif);
+      font-family: var(--font-family);
       font-size: 15px;
-      line-height: 2.1;
-      letter-spacing: .04em;
+      line-height: 1.85;
+      letter-spacing: .02em;
       padding:
-        calc(48px + env(safe-area-inset-top))
-        calc(22px + env(safe-area-inset-right))
-        calc(64px + env(safe-area-inset-bottom))
-        calc(22px + env(safe-area-inset-left));
+        calc(32px + env(safe-area-inset-top))
+        calc(20px + env(safe-area-inset-right))
+        calc(48px + env(safe-area-inset-bottom))
+        calc(20px + env(safe-area-inset-left));
       -webkit-text-size-adjust: 100%;
     }
     main {
-      max-width: 680px;
+      max-width: 720px;
       margin: 0 auto;
     }
     h1 {
-      font-size: 24px;
-      font-weight: 700;
-      letter-spacing: .24em;
+      font-size: 26px;
+      font-weight: 800;
       color: var(--heading);
-      margin: 0 0 8px;
+      margin: 0 0 10px;
+      letter-spacing: .04em;
     }
     .updated {
-      font-size: 12.5px;
+      font-size: 13px;
       color: var(--text-sub);
-      letter-spacing: .16em;
-      margin: 0 0 36px;
+      margin: 0 0 28px;
     }
     h2 {
-      font-size: 16px;
+      font-size: 17px;
       font-weight: 700;
-      letter-spacing: .18em;
       color: var(--heading);
-      margin: 40px 0 12px;
-      border-left: 3px solid var(--accent);
-      padding-left: 10px;
+      margin: 36px 0 14px;
+      border-left: 4px solid var(--accent);
+      padding-left: 12px;
+      line-height: 1.4;
     }
     p {
       margin: 0 0 14px;
       color: var(--text-main);
     }
-    ul {
+    ul, ol {
       margin: 0 0 16px;
-      padding-left: 1.3em;
+      padding-left: 1.4em;
       color: var(--text-main);
     }
     li {
       margin-bottom: 8px;
     }
-    code {
-      font-family: var(--mono);
-      font-size: 13px;
-      letter-spacing: 0;
-      background: var(--code-bg);
-      border-radius: 4px;
-      padding: 2px 6px;
-      color: var(--code-text);
-    }
     strong {
       color: var(--heading);
-      font-weight: 700;
+      font-weight: 600;
     }
     a {
       color: var(--accent);
@@ -97,42 +101,52 @@
       transition: all .2s ease;
     }
     a:hover {
-      color: #c2410c;
-      border-color: #c2410c;
+      color: var(--accent-hover);
+      border-color: var(--accent-hover);
     }
     .callout {
       background: var(--callout-bg);
-      border-left: 3px solid var(--accent);
-      padding: 12px 16px;
-      margin: 18px 0;
-      border-radius: 0 6px 6px 0;
+      border-left: 4px solid var(--callout-border);
+      padding: 14px 18px;
+      margin: 20px 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+    .footer-meta {
+      font-size: 13px;
+      color: var(--text-sub);
+      text-align: center;
+      margin-top: 36px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
     }
   </style>
 </head>
 <body>
 <main>
-  <h1>用户协议</h1>
-  <p class="updated">版本生效与更新日期：2026 年 10 月 27 日</p>
+  <h1>用户服务协议</h1>
+  <p class="updated">版本生效与更新日期：2026 年 10 月 29 日</p>
 
-  <p>欢迎你使用<strong>「省万宝」</strong>！</p>
-  <p>在注册、登录或使用省万宝提供的各项服务前，请你务必审慎阅读、充分理解本《用户协议》（以下简称“本协议”）的全部条款。<strong>特别是涉及免除或者限制责任的条款、服务开通与变更、违规处置及争议管辖条款。</strong></p>
+  <p>欢迎您使用<strong>「省万宝」</strong>！</p>
+  <p>在注册、登录或使用省万宝提供的各项服务前，请您务必审慎阅读、充分理解本《用户服务协议》（以下简称“本协议”）的全部条款。<strong>特别是涉及免除或者限制责任的条款、服务开通与变更、违规处置及争议管辖条款。</strong></p>
 
   <div class="callout">
-    <p style="margin:0;">当你完成注册、登录或勾选“同意”并继续使用本 App，即表示你已充分阅读、理解并自愿接受本协议的全部约束。如你不同意本协议，请停止使用本服务。</p>
+    <p style="margin:0;"><strong>【特别提示】</strong>当您完成注册、登录或勾选“同意”并继续使用本 App，即表示您已充分阅读、理解并自愿接受本协议的全部约束。如您不同意本协议，请停止使用本服务。</p>
   </div>
 
   <h2>一、服务定义与定位说明</h2>
   <p><strong>「省万宝」</strong>（以下简称“本平台”或“我们”）是一款致力于为广大网购消费者提供各大电商平台（包括但不限于淘宝、天猫、京东、拼多多、唯品会等）<strong>商品优惠券搜索、导购领券、超值比价与优惠线报分享</strong>的工具型移动应用。</p>
   <ul>
     <li><strong>第三方导购性质</strong>：本平台系中立的技术导购信息服务工具，并非电商交易中的买方、卖方或直接承运方。</li>
-    <li><strong>交易主体关系</strong>：所有商品的销售、付款结算、发票开具、物流配送及售后保障（如退款、换货、维修），均由你跳转前往的对应第三方电商平台及具体商家独立承担法律责任。</li>
+    <li><strong>交易主体关系</strong>：所有商品的销售、付款结算、发票开具、物流配送及售后保障（如退款、换货、维修），均由您跳转前往的对应第三方电商平台及具体商家独立承担法律责任。</li>
   </ul>
 
   <h2>二、账号注册与安全保管</h2>
   <ul>
-    <li><strong>资格要求</strong>：你应确认具备完全民事权利能力和民事行为能力；若你为未满 18 周岁的未成年人，应在监护人陪同指导下共同确认后方可使用。</li>
-    <li><strong>真实有效</strong>：你注册使用的手机号码必须为你合法持有的有效号码。通过短信验证码或运营商一键登录绑定的账号与你本人绑定。</li>
-    <li><strong>账号保管</strong>：你的账号仅限你个人自主使用，严禁转让、出租、借用或出借给任何第三方。因你保管不善致使账号、验证码或密码泄露所产生的法律责任由你自行承担。</li>
+    <li><strong>资格要求</strong>：您应确认具备完全民事权利能力和民事行为能力；若您为未满 18 周岁的未成年人，应在监护人陪同指导下共同确认后方可使用。</li>
+    <li><strong>真实有效</strong>：您注册使用的手机号码必须为您合法持有的有效号码。通过短信验证码或运营商一键登录绑定的账号与您本人身份关联。</li>
+    <li><strong>账号保管</strong>：您的账号仅限您个人自主使用，严禁转让、出租、借用或出借给任何第三方。因您个人保管不善致使账号、验证码泄露所产生的法律责任由您自行承担。</li>
     <li><strong>异常处置</strong>：如发现账号存在未经授权的访问、异常操作或其他安全风险，请立即联系本平台或更新密码。</li>
   </ul>
 
@@ -148,11 +162,11 @@
   </ul>
 
   <h2>四、用户守则与行为规范</h2>
-  <p>在使用本 App 期间，你承诺严格遵守法律法规，不得从事下列行为：</p>
+  <p>在使用本 App 期间，您承诺严格遵守法律法规，不得从事下列行为：</p>
   <ul>
     <li>利用本平台传播违反宪法、危害国家安全、宣扬暴恐邪教、散布谣言、淫秽色情或侵犯他人合法权益的信息；</li>
     <li>对本平台系统、接口或数据进行反向工程、逆向反编译、恶意抓取或爬虫脱机采集；</li>
-    <li>利用系统漏洞或第三方工具进行虚假交易、非正常高频刷单、批量恶意套现；</li>
+    <li>利用系统漏洞或第三方工具实施攻击、干扰系统正常运行；</li>
     <li>侵犯本平台或第三方的商标权、著作权、专利权及商业机密等合法权益。</li>
   </ul>
 
@@ -170,17 +184,21 @@
 
   <h2>七、账号注销与协议终止</h2>
   <ul>
-    <li><strong>自主注销</strong>：你可随时在 App「我的」-「设置」-「账户与安全」中提交自主注销账号申请。</li>
+    <li><strong>自主注销</strong>：您可随时在 App「我的」-「设置」-「账户注销」中提交自主注销账号申请。</li>
     <li><strong>注销后果</strong>：一旦注销完成，该账号将被永久作废，历史浏览记录、收藏夹与绑定关系将依法清退或匿名化处理，无法撤销恢复。</li>
-    <li><strong>违规终止</strong>：如你严重违反法律法规或本协议条款，本平台有权单方中断、限制甚至终止向你提供服务，并追究相应法律责任。</li>
+    <li><strong>违规终止</strong>：如您严重违反法律法规或本协议条款，本平台有权单方中断、限制甚至终止向您提供服务，并追究相应法律责任。</li>
   </ul>
 
   <h2>八、协议变更、法律适用与管辖</h2>
   <ul>
-    <li><strong>协议更新</strong>：我们可能会根据业务升级或法律法规更新调整本协议。最新协议将在 App 或官方页面公示，重大变更时将重新提示你确认。</li>
+    <li><strong>协议更新</strong>：我们可能会根据业务升级或法律法规更新调整本协议。最新协议将在 App 或官方页面公示，重大变更时将重新提示您确认。</li>
     <li><strong>法律适用</strong>：本协议的订立、执行、解释及争议解决均适用中华人民共和国大陆地区法律法规。</li>
     <li><strong>争议解决</strong>：如双方就本协议内容或履行发生任何争议，应友好协商解决；协商不成的，任何一方均可向本平台运营方所在地有管辖权的人民法院提起诉讼。</li>
   </ul>
+
+  <div class="footer-meta">
+    省万宝 运营团队 · 保留所有权利
+  </div>
 </main>
 </body>
 </html>

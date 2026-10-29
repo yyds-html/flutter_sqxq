@@ -3,23 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="theme-color" content="#ffffff">
-  <meta name="description" content="省万宝 App 隐私政策：详细说明我们申请了哪些系统权限（剪贴板、相册、相机等）、服务端记录了什么、集成了哪些第三方 SDK（阿里百川、阿里云号码认证等），以及你如何自主管理与注销这些数据。">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
+  <meta name="description" content="省万宝 App 隐私政策：详细说明我们申请的系统权限、收集的必要信息、集成的第三方 SDK 及您如何管理与注销个人数据。">
   <title>隐私政策 · 省万宝</title>
   <style>
     :root {
       --bg: #ffffff;
-      --text-main: #262626;
-      --text-sub: #737373;
-      --heading: #171717;
+      --text-main: #334155;
+      --text-sub: #64748b;
+      --heading: #0f172a;
       --accent: #e2603f;
-      --border: #e5e5e5;
-      --code-bg: #f5f5f5;
-      --code-text: #b91c1c;
-      --table-th-bg: #fafaf9;
+      --accent-hover: #c2410c;
+      --border: #e2e8f0;
+      --table-th-bg: #f8fafc;
       --callout-bg: #fff8f5;
-      --serif: "Songti SC", "Noto Serif SC", "Noto Serif CJK SC", "STSong", "SimSun", serif;
-      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      --callout-border: #e2603f;
+      --badge-bg: #f1f5f9;
+      --badge-text: #475569;
+      --badge-req-bg: #fee2e2;
+      --badge-req-text: #991b1b;
+      --badge-opt-bg: #e0f2fe;
+      --badge-opt-text: #0369a1;
+      --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #121212;
+        --text-main: #cbd5e1;
+        --text-sub: #94a3b8;
+        --heading: #f8fafc;
+        --accent: #f97316;
+        --accent-hover: #fb923c;
+        --border: #27272a;
+        --table-th-bg: #18181b;
+        --callout-bg: #1c1917;
+        --callout-border: #ea580c;
+        --badge-bg: #27272a;
+        --badge-text: #cbd5e1;
+        --badge-req-bg: #450a0a;
+        --badge-req-text: #fca5a5;
+        --badge-opt-bg: #082f49;
+        --badge-opt-text: #7dd3fc;
+      }
     }
     * { box-sizing: border-box; }
     html, body {
@@ -28,74 +54,63 @@
       color: var(--text-main);
     }
     body {
-      font-family: var(--serif);
+      font-family: var(--font-family);
       font-size: 15px;
-      line-height: 2.1;
-      letter-spacing: .04em;
+      line-height: 1.85;
+      letter-spacing: .02em;
       padding:
-        calc(48px + env(safe-area-inset-top))
-        calc(22px + env(safe-area-inset-right))
-        calc(64px + env(safe-area-inset-bottom))
-        calc(22px + env(safe-area-inset-left));
+        calc(32px + env(safe-area-inset-top))
+        calc(20px + env(safe-area-inset-right))
+        calc(48px + env(safe-area-inset-bottom))
+        calc(20px + env(safe-area-inset-left));
       -webkit-text-size-adjust: 100%;
     }
     main {
-      max-width: 680px;
+      max-width: 720px;
       margin: 0 auto;
     }
     h1 {
-      font-size: 24px;
-      font-weight: 700;
-      letter-spacing: .24em;
+      font-size: 26px;
+      font-weight: 800;
       color: var(--heading);
-      margin: 0 0 8px;
+      margin: 0 0 10px;
+      letter-spacing: .04em;
     }
     .updated {
-      font-size: 12.5px;
+      font-size: 13px;
       color: var(--text-sub);
-      letter-spacing: .16em;
-      margin: 0 0 36px;
+      margin: 0 0 28px;
     }
     h2 {
-      font-size: 16px;
+      font-size: 17px;
       font-weight: 700;
-      letter-spacing: .18em;
       color: var(--heading);
-      margin: 40px 0 12px;
-      border-left: 3px solid var(--accent);
-      padding-left: 10px;
+      margin: 36px 0 14px;
+      border-left: 4px solid var(--accent);
+      padding-left: 12px;
+      line-height: 1.4;
     }
     h3 {
-      font-size: 14.5px;
+      font-size: 15px;
       font-weight: 700;
-      letter-spacing: .1em;
       color: var(--heading);
-      margin: 24px 0 8px;
+      margin: 22px 0 10px;
     }
     p {
       margin: 0 0 14px;
       color: var(--text-main);
     }
-    ul {
+    ul, ol {
       margin: 0 0 16px;
-      padding-left: 1.3em;
+      padding-left: 1.4em;
       color: var(--text-main);
     }
     li {
       margin-bottom: 8px;
     }
-    code {
-      font-family: var(--mono);
-      font-size: 13px;
-      letter-spacing: 0;
-      background: var(--code-bg);
-      border-radius: 4px;
-      padding: 2px 6px;
-      color: var(--code-text);
-    }
     strong {
       color: var(--heading);
-      font-weight: 700;
+      font-weight: 600;
     }
     a {
       color: var(--accent);
@@ -104,139 +119,202 @@
       transition: all .2s ease;
     }
     a:hover {
-      color: #c2410c;
-      border-color: #c2410c;
+      color: var(--accent-hover);
+      border-color: var(--accent-hover);
+    }
+    .callout {
+      background: var(--callout-bg);
+      border-left: 4px solid var(--callout-border);
+      padding: 14px 18px;
+      margin: 20px 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+    .table-container {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 16px 0 24px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
     }
     table {
       width: 100%;
+      min-width: 540px;
       border-collapse: collapse;
-      margin: 16px 0 24px;
       font-size: 13.5px;
-      line-height: 1.7;
+      line-height: 1.6;
     }
     th, td {
       border: 1px solid var(--border);
-      padding: 10px 12px;
+      padding: 12px 14px;
       text-align: left;
+      vertical-align: top;
     }
     th {
       background: var(--table-th-bg);
       color: var(--heading);
       font-weight: 700;
+      white-space: nowrap;
     }
-    td {
-      color: var(--text-main);
+    .badge {
+      display: inline-block;
+      padding: 2px 7px;
+      font-size: 11px;
+      font-weight: 600;
+      border-radius: 4px;
+      background: var(--badge-bg);
+      color: var(--badge-text);
+      white-space: nowrap;
+    }
+    .badge-opt {
+      background: var(--badge-opt-bg);
+      color: var(--badge-opt-text);
+    }
+    .badge-req {
+      background: var(--badge-req-bg);
+      color: var(--badge-req-text);
     }
     hr {
       border: 0;
       border-top: 1px solid var(--border);
-      margin: 44px 0 28px;
+      margin: 40px 0 24px;
     }
-    .callout {
-      background: var(--callout-bg);
-      border-left: 3px solid var(--accent);
-      padding: 12px 16px;
-      margin: 18px 0;
-      border-radius: 0 6px 6px 0;
+    .footer-meta {
+      font-size: 13px;
+      color: var(--text-sub);
+      text-align: center;
+      margin-top: 36px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
     }
   </style>
 </head>
 <body>
 <main>
   <h1>隐私政策</h1>
-  <p class="updated">版本生效与更新日期：2026 年 10 月 27 日</p>
+  <p class="updated">版本生效与更新日期：2026 年 10 月 29 日</p>
 
-  <p><strong>「省万宝」</strong>（以下简称“本 App”或“我们”）是一款专为用户寻找全网电商大额优惠券、导购比价与生活省钱福利的移动工具助手。我们深知个人隐私与数据安全对你的重要性，坚持遵循<strong>「权责一致、目的明确、选择同意、最少必要、公开透明」</strong>的原则保护你的个人信息。</p>
+  <p><strong>「省万宝」</strong>（以下简称“本 App”或“我们”）是一款专为用户寻找全网电商优质商品大额优惠券、折扣比价与生活省钱福利的移动工具助手。我们深知个人隐私与数据安全对您的重要性，严格遵循<strong>「权责一致、目的明确、选择同意、最少必要、公开透明」</strong>的法定原则保护您的个人信息。</p>
 
   <div class="callout">
-    <p style="margin:0;">本说明不玩文字游戏，老老实实向你交代本 App <strong>读取了哪些手机内容、为什么申请相关权限、接入了哪些 SDK</strong>，以及你如何随时撤回授权或注销删除。</p>
+    <p style="margin:0;"><strong>【特别提示】</strong>本政策向您详细说明本 App <strong>读取了哪些手机内容、申请系统权限的触发时机、集成了哪些第三方 SDK</strong>，以及您如何自主管理授权或随时注销账户。在使用本产品前，请您务必审慎阅读并充分理解本政策。</p>
   </div>
 
   <h2>一、系统权限申请与实际使用场景</h2>
-  <p>我们仅在实现特定业务功能时，以弹窗形式向你主动申请相关系统权限。你可以随时在系统的「权限管理」中关闭任一权限：</p>
+  <p>我们仅在您触发特定业务功能时，以系统弹窗形式明确申请必要权限。<strong>拒绝授予非必要权限不影响您使用基础的商品浏览、搜索与比价功能</strong>。您可以随时在操作系统的「设置 - 权限管理」中自主开启或关闭任一权限：</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th style="width: 24%;">权限名称</th>
-        <th style="width: 28%;">调用场景</th>
-        <th>详细说明与保障</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><strong>读取/写入剪贴板</strong></td>
-        <td>冷启动或从后台切换回 App 前台时识别淘口令/电商链接</td>
-        <td>当你从淘宝、京东、拼多多等外部软件复制商品信息回到本 App 时，App 会在获得你许可的前提下自动读取剪贴板以帮你<strong>智能查券与匹配优惠券</strong>。本 App 对非电商文本及自身复制的内容自动过滤跳过，<strong>绝不会上传任何与查券无关的私人剪贴板内容</strong>。</td>
-      </tr>
-      <tr>
-        <td><strong>相册/读取媒体内容</strong><br><code>READ_MEDIA_IMAGES</code></td>
-        <td>保存商品海报、分享二维码；修改个人头像时选取照片</td>
-        <td>仅在你主动点击「保存海报」、「保存二维码」或在个人资料中「更换头像」时调用。我们绝不会在后台暗中扫描或上传你的私人照片。</td>
-      </tr>
-      <tr>
-        <td><strong>相机拍照</strong><br><code>CAMERA</code></td>
-        <td>现场拍照设置头像；提交客服反馈与申诉时拍照存证</td>
-        <td>仅在你主动触发拍照操作时启动相机硬件，拍完后由你确认方可提交，绝不进行任何静默拍照或录像。</td>
-      </tr>
-      <tr>
-        <td><strong>网络访问</strong><br><code>INTERNET</code></td>
-        <td>获取商品优惠券、同步订单收益、账号登录通信</td>
-        <td>应用的基础网络通信权限，用于请求商品信息、解析优惠券、拉取外卖福利活动及与云端数据库安全同步。</td>
-      </tr>
-      <tr>
-        <td><strong>查询应用列表与电商 Scheme 跳转</strong></td>
-        <td>一键打开手机淘宝、京东、拼多多等官方客户端领券下单</td>
-        <td>通过查询系统是否支持指定 Scheme（如 <code>tbopen://</code>、<code>openApp.jdMobile://</code>、<code>pinduoduo://</code> 等），若已安装则一键唤起官方 App 完成交易，避免你在内置网页反复输密码；<strong>不遍历、不搜集你的完整已装应用列表</strong>。</td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 20%;">权限名称</th>
+          <th style="width: 14%;">属性</th>
+          <th style="width: 28%;">调用场景</th>
+          <th>详细说明与保障</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>读取剪贴板</strong></td>
+          <td><span class="badge badge-opt">可选业务</span></td>
+          <td>从后台切回 App 时识别商品口令或电商链接</td>
+          <td>在获得您明确同意的前提下，当您复制外部电商口令并返回 App 时，自动识别商品信息以快速匹配大额优惠券。App 自动过滤非电商文本及内部已复制文本，<strong>绝不上传任何无关剪贴板内容</strong>。</td>
+        </tr>
+        <tr>
+          <td><strong>相册/媒体存储</strong><br><code>READ_MEDIA_IMAGES</code></td>
+          <td><span class="badge badge-opt">可选业务</span></td>
+          <td>保存分享海报、二维码；修改头像选取照片</td>
+          <td>仅在您主动点击「保存海报至相册」、「保存二维码」或在个人资料中上传更换头像时调用。我们绝不会在后台暗中扫描或上传您的相册图片。</td>
+        </tr>
+        <tr>
+          <td><strong>相机拍照</strong><br><code>CAMERA</code></td>
+          <td><span class="badge badge-opt">可选业务</span></td>
+          <td>拍照设置头像；提交客服反馈与申诉凭据</td>
+          <td>仅在您主动点击拍照操作时启动相机硬件，拍完后需经您二次确认才可提交，绝不进行静默拍照或录像。</td>
+        </tr>
+        <tr>
+          <td><strong>网络访问</strong><br><code>INTERNET</code></td>
+          <td><span class="badge badge-req">基础必须</span></td>
+          <td>获取优惠券、商品比价、账号登录通信</td>
+          <td>应用的基础网络通信权限，用于请求商品信息、解析优惠券大额折扣及与云端服务器进行安全加密通信。</td>
+        </tr>
+        <tr>
+          <td><strong>应用列表查询/Scheme跳转</strong></td>
+          <td><span class="badge badge-opt">可选业务</span></td>
+          <td>唤起手机淘宝、京东、拼多多等客户端领券</td>
+          <td>通过系统接口检测是否安装对应电商 App（如 <code>tbopen://</code>、<code>openApp.jdMobile://</code> 等），若已安装则一键唤起官方 App 领券下单，避免在网页端重复输入密码；<strong>不遍历、不搜集您的完整已安装应用列表</strong>。</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-  <h2>二、服务端记录与收集的数据</h2>
-  <p>当你使用省万宝提供的在线服务时，后端服务（基于 Supabase 鉴权存储及接口服务）会依法记录以下必要数据：</p>
+  <h2>二、我们收集与处理的必要信息</h2>
+  <p>当您使用省万宝提供的各项在线服务时，我们严格依法收集实现功能所必需的数据：</p>
   <ul>
-    <li><strong>账号信息</strong>：你的注册手机号码（用于验证码或本机号码一键校验身份）、经过哈希加密的安全密码、昵称与头像图片。</li>
-    <li><strong>收藏与心愿单信息</strong>：你在本 App 内主动收藏的商品记录与心愿单信息，保存在本地并同步至云端以便随时查看。</li>
-    <li><strong>好友连接关系</strong>：通过邀请码绑定的好友关系，仅用于在【我的】>【我的用户】中查看已连接的好友列表。</li>
-    <li><strong>基础安全日志</strong>：发起接口请求时的 IP 地址与网络时间，仅在内存与风控日志中用于<strong>防范黑产自动化刷单、防撞库及限流安全保护</strong>，不会用于任何广告定向追踪或个人画像。</li>
+    <li><strong>账号信息</strong>：当您注册或登录时，我们收集您的注册手机号码（用于短信验证码或本机号码一键校验身份）、经过哈希安全加密的密码、昵称与头像图片。</li>
+    <li><strong>收藏与心愿单信息</strong>：您在 App 内主动收藏的商品记录与心愿单信息，加密存储于本地并同步至云端数据库，方便您多设备查看降价动态。</li>
+    <li><strong>好友连接关系</strong>：通过邀请码绑定的好友关系，仅在【我的】>【我的用户】中向您展示已连接的好友昵称与加入时间。</li>
+    <li><strong>系统安全日志</strong>：接口请求时的 IP 地址与网络时间，仅在内存与风控日志中用于<strong>防范黑产自动化刷单、防撞库攻击及限流防护</strong>，绝不用于任何定向广告追踪或个性化商业画像。</li>
   </ul>
 
-  <h2>三、第三方 SDK 与外部合作方</h2>
-  <p>为了保障部分核心功能（如快速登录、淘宝客授权跳转）的正常运行，本 App 集成了部分经过审慎评估的第三方开发套件（SDK）。它们各自收集的数据与隐私权政策如下：</p>
+  <h2>三、第三方 SDK 目录与外部合作方</h2>
+  <p>为保障部分核心功能（快速登录、淘宝客授权跳转）的正常运行，本 App 集成了经过严格安全检测与隐私合规评估的第三方 SDK：</p>
 
-  <h3>1. 阿里百川 SDK（flutter_alibc_ultimate / 阿里巴巴）</h3>
-  <ul>
-    <li><strong>服务用途</strong>：提供淘宝账号快捷授权登录、唤起手机淘宝客户端完成领券、加入购物车与商品详情无缝跳转。</li>
-    <li><strong>收集信息</strong>：设备型号、操作系统版本、网络状态、应用包名、淘宝客交易参数。</li>
-    <li><strong>第三方说明</strong>：请查阅 <a href="https://terms.alicdn.com/legal-agreement/terms/suit_bu1_taobao/suit_bu1_taobao201703241622_61002.html" target="_blank" rel="noopener">阿里百川隐私权政策</a>。</li>
-  </ul>
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>SDK 名称</th>
+          <th>服务商/主体</th>
+          <th>功能用途</th>
+          <th>收集信息类型</th>
+          <th>第三方政策链接</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>阿里百川 SDK</strong><br><code>flutter_alibc_ultimate</code></td>
+          <td>阿里巴巴（中国）网络技术有限公司</td>
+          <td>淘宝账号授权登录、唤起手机淘宝客户端完成领券下单</td>
+          <td>设备型号、操作系统版本、网络状态、应用包名、淘宝客交易参数</td>
+          <td><a href="https://terms.alicdn.com/legal-agreement/terms/suit_bu1_taobao/suit_bu1_taobao201703241622_61002.html" target="_blank" rel="noopener">阿里百川隐私权政策</a></td>
+        </tr>
+        <tr>
+          <td><strong>阿里云号码认证 SDK</strong><br><code>ali_auth</code></td>
+          <td>阿里云计算有限公司</td>
+          <td>协同三大运营商提供 SIM 卡手机号一键免密安全登录</td>
+          <td>网络运营商类型、蜂窝连接状态、脱敏后的运营商网关 Token</td>
+          <td><a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud202112211045_86198.html" target="_blank" rel="noopener">号码认证隐私政策</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-  <h3>2. 阿里云号码认证服务 SDK（ali_auth / 一键免密登录）</h3>
+  <h2>四、您如何管理自己的个人信息（用户权利）</h2>
+  <p>您对自己在省万宝的全部个人信息拥有完整的控制权：</p>
   <ul>
-    <li><strong>服务用途</strong>：协同中国移动、中国联通、中国电信三大运营商，免去短信验证码输入，实现当前设备 SIM 卡手机号一键登录。</li>
-    <li><strong>收集信息</strong>：网络运营商类型、蜂窝网络连接状态、加密后的运营商网关 Token。</li>
-    <li><strong>第三方说明</strong>：请查阅 <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud202112211045_86198.html" target="_blank" rel="noopener">阿里云号码认证服务隐私政策</a>。</li>
-  </ul>
-
-  <h2>四、你如何控制自己的数据（用户权利）</h2>
-  <p>你对自己在省万宝的全部个人信息拥有完整的控制权：</p>
-  <ul>
-    <li><strong>查阅与修改</strong>：在 App 中点击「我的」-「设置」-「完善个人信息」，可随时查阅并更新你的头像、昵称、收货地址与个人资料。</li>
-    <li><strong>撤销系统授权</strong>：随时前往手机系统的「设置」-「应用」-「省万宝」中关闭相册、相机等系统权限，撤回授权不影响其他基础导购功能的正常使用。</li>
-    <li><strong>账号注销与清空</strong>：在「我的」-「设置」-「账户与安全」中，我们提供了<strong>自主注销账号</strong>入口。当你确认注销账号后，我们将停止为你提供服务，并在法定期限届满后永久删除或匿名化清退你的手机号、历史记录与绑定关系。</li>
-    <li><strong>清除本地数据</strong>：可直接在系统应用详情中点击「清除数据」或卸载本 App，本地所有缓存、足迹和凭据将一并清除。</li>
+    <li><strong>查阅与修改</strong>：在 App 中点击「我的」-「设置」-「个人资料」，可随时查阅并更新您的头像、昵称等基础信息。</li>
+    <li><strong>撤销系统授权</strong>：您可以随时在手机系统「设置」中关闭相册、相机等系统权限，撤销授权后不影响其他导购功能的正常使用。</li>
+    <li><strong>自主注销账号</strong>：我们在 App 内「我的」-「设置」中提供了明确便捷的<strong>「账户注销」</strong>通道。在您确认注销后，我们将立即停止为您提供服务，并在 15 个工作日内永久删除或匿名化处理您的全部账号与历史记录。</li>
+    <li><strong>清除本地数据</strong>：您可随时在系统应用设置中点击「清除数据」或卸载本 App，本地缓存及凭证将立即被清除。</li>
   </ul>
 
   <h2>五、未成年人保护</h2>
-  <p>本 App 的商品导购服务主要面向具备完全民事行为能力的成年网购消费者。<strong>我们不会主动要求未成年人提供个人敏感资料，也不会向未成年人推送违规消费内容。</strong>若你是未满 18 周岁的未成年人，使用本服务前应在父母或其他监护人的陪同与指导下共同阅读并取得其明确同意。</p>
+  <p>本 App 的导购服务主要面向具备完全民事行为能力的成年网购消费者。<strong>我们不会主动收集未成年人的个人信息，也不会向未成年人推送诱导消费内容。</strong>若您是未满 18 周岁的未成年人，使用本服务前应在父母或其他法定监护人的陪同指导下共同阅读并取得其明确同意。</p>
 
-  <h2>六、政策变更与联系我们</h2>
-  <p>如因业务功能迭代或法律法规要求而调整本政策，我们会在更新时重新发布并刷新本页面顶部的更新时间；涉及重大功能权责调整时，我们会在 App 启动时通过弹窗通知再次征求你的同意。</p>
-  <p>如果你对本隐私政策或个人数据处理有任何疑问、建议或投诉，可通过以下方式联系我们：</p>
+  <h2>六、政策更新与联系我们</h2>
+  <p>如因业务功能迭代或法律法规要求而调整本政策，我们会在更新时重新发布并刷新页面顶部的生效日期；涉及重大权责变动时，我们会在 App 启动时以弹窗形式重新提示并征求您的授权同意。</p>
+  <p>如果您对本隐私政策或个人信息保护有任何疑问、建议或投诉举报，可通过以下方式联系我们：</p>
   <ul>
-    <li>在 App 内点击「我的」-「设置」-「帮助与反馈」提交在线留言；</li>
-    <li>通过开发者反馈渠道与关于页面列明的官方服务支持进行联系。</li>
+    <li>在 App 内通过「我的」-「设置」-「帮助与反馈」提交在线留言；</li>
+    <li>我们承诺在验证您的用户身份后，于 <strong>15 个工作日内</strong> 予以核查并答复处理。</li>
   </ul>
+
+  <div class="footer-meta">
+    省万宝 运营团队 · 保留所有权利
+  </div>
 </main>
 </body>
 </html>
